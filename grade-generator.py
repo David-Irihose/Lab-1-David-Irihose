@@ -1,6 +1,5 @@
 # -----------------------------------------------
 # Grade Generator - Lab 1: Grade Calculator
-# African Leadership University
 # -----------------------------------------------
 import csv
 
