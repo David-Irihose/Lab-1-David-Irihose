@@ -1,5 +1,5 @@
 # -----------------------------------------------
-# Grade Generator - Lab 1: Grade Calculator
+# Grade Generator -Calculator
 # -----------------------------------------------
 import csv
 
@@ -8,10 +8,9 @@ print("Enter your assignment details below>>>>>\n")
 
 grades = []  # list to store all assignment info
 
-# Input Collection + Validation
+# Input Collection part
 # -------------------------------
 while True:
-    # Assignment name
     print(" Grades")
     name = input("Enter""assignment name: ").strip()
     if not name:
@@ -36,7 +35,7 @@ while True:
         except ValueError:
             print("Please enter a numeric grade.")
 
-    # Weight (positive)
+    # Weight ( must be positive)
     while True:
         try:
             weight = float(input("Enter weight (1–100): "))
@@ -74,7 +73,7 @@ weighted_total = total_fa_score + total_sa_score
 final_percentage = (weighted_total / total_weight) * 100 if total_weight > 0 else 0
 gpa = round((final_percentage / 100) * 5.0, 4)
 
-# Pass/Fail Logic
+# Pass/Fail part
 # -------------------------------
 fa_pass = total_fa_score >= (0.5 * total_fa_weight) if total_fa_weight > 0 else True
 sa_pass = total_sa_score >= (0.5 * total_sa_weight) if total_sa_weight > 0 else True
